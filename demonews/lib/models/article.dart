@@ -1,4 +1,8 @@
+import 'package:demonews/models/sources.dart';
+
 class ArticleModel {
+  final SourceModel source;
+  final String name;
   final String author;
   final String title;
   final String description;
@@ -8,6 +12,9 @@ class ArticleModel {
   final String content;
 
   ArticleModel(
+    
+    this.source,
+    this.name,
     this.author,
     this.title,
     this.description,
@@ -18,7 +25,9 @@ class ArticleModel {
   );
 
   ArticleModel.fromJson(Map<String, dynamic> json)
-      : author = json["author"],
+      : source = SourceModel.fromJson(json["source"]),
+        name = json["name"],
+        author = json["author"],
         title = json["title"],
         description = json["description"],
         url = json["url"],
