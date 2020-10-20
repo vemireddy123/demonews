@@ -1,5 +1,7 @@
 class SourceModel {
   final String author;
+  final String category;
+  final String id;
   final String name;
   final String title;
   final String description;
@@ -10,6 +12,8 @@ class SourceModel {
 
   SourceModel(
     this.author,
+    this.category,
+    this.id,
     this.name,
     this.title,
     this.description,
@@ -21,6 +25,8 @@ class SourceModel {
 
   SourceModel.fromJson(Map<String, dynamic> json)
       : author = json["author"],
+        category = json["category"],
+        id = json["id"],
         name = json["name"],
         title = json["title"],
         description = json["description"],

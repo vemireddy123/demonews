@@ -1,4 +1,3 @@
-import 'package:demonews/bloc/get_source_news.dart';
 import 'package:demonews/models/article_response.dart';
 import 'package:demonews/models/source_response.dart';
 import 'package:dio/dio.dart';
@@ -15,7 +14,7 @@ class NewsRepository {
     var params = {
       "apiKey": apiKey,
       "language": "en",
-      "country": "us",
+      "country": "in",
     };
     try {
       Response response = await _dio.get(getSourceUrl, queryParameters: params);
@@ -31,7 +30,7 @@ class NewsRepository {
     var params = {
       "apiKey": apiKey,
       // "language": "en",
-      "country": "us",
+      "country": "in",
     };
     try {
       Response response = await _dio.get(getTopHeadLinesUrl, queryParameters: params);

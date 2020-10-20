@@ -1,4 +1,3 @@
-import 'package:demonews/models/article.dart';
 import 'package:demonews/models/sources.dart';
 
 class SourceResponce {
