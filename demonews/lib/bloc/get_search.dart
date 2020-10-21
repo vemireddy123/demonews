@@ -7,7 +7,7 @@ class GetSearch {
   final BehaviorSubject<ArticleResponce> _subject =
       BehaviorSubject<ArticleResponce>();
 
- search(String value) async {
+ getSearch(String value) async {
     ArticleResponce responce = await _repository.search(value);
     _subject.sink.add(responce);
   }
@@ -20,4 +20,4 @@ class GetSearch {
   }
   BehaviorSubject<ArticleResponce> get subject => _subject;
 }
-final search = GetSearch();
+final getSearchBloc = GetSearch();

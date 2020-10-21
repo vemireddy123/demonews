@@ -3,6 +3,7 @@ import 'package:demonews/elements/error_element.dart';
 import 'package:demonews/elements/loader_element.dart';
 import 'package:demonews/models/article.dart';
 import 'package:demonews/models/article_response.dart';
+import 'package:demonews/screens/news_detail_screen.dart';
 import 'package:flutter/material.dart';
 import '../styles/theam.dart' as Style;
 import 'package:timeago/timeago.dart' as timeago;
@@ -66,7 +67,14 @@ class _HotNewsState extends State<HotNews> {
                   top: 10.0,
                 ),
                 child: GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                     Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => NewsDetailScreen(article: article[index]),
+                ),
+              );
+                  },
                   child: Container(
                     width: 220.0,
                     decoration: BoxDecoration(

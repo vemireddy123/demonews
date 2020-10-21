@@ -82,8 +82,8 @@ class NewsRepository {
       Response response = await _dio.get(getTopHeadLinesUrl, queryParameters: params);
       return ArticleResponce.fromJson(response.data);
     } catch (error) {
-      // print("Exception occured : $error stacktrace :$stacktrace");
-      return ArticleResponce.withError(error);
+      print("Exception occured : $error stacktrace :$stacktrace");
+      // return ArticleResponce.withError(error);
       
     }
   }

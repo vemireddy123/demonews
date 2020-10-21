@@ -1,5 +1,6 @@
 import 'package:demonews/bloc/bottom_navbar.dart';
 import 'package:demonews/screens/tabs/home_screen.dart';
+import 'package:demonews/screens/tabs/search_tab.dart';
 import 'package:demonews/widgets/hot_news.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +48,7 @@ class _MainScreenState extends State<MainScreen> {
               case NavBarItem.SOURCE:
                 return HotNews();
               case NavBarItem.SEARCH:
-                return testScreen();
+                return SearchTab();
             }
           },
         ),
